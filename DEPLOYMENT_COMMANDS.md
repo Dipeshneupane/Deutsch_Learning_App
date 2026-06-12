@@ -19,8 +19,9 @@ docker run --rm -p 8080:8080 \
 
 1. Push the project to GitHub.
 2. In Render, create a new Blueprint from the repository using [render.yaml](/Users/dipeshneupane/Downloads/Apps/German Learning App/render.yaml).
-3. Set `CORS_ALLOWED_ORIGINS` to your final frontend domain.
-4. Wait for the database and API service to finish deploying.
+3. Set `API_BASE_URL` on the frontend service to `https://YOUR_BACKEND_DOMAIN/api/v1`.
+4. Set `CORS_ALLOWED_ORIGINS` on the backend service to your final frontend domain.
+5. Wait for the database, API service, and frontend service to finish deploying.
 
 Verify:
 
@@ -29,7 +30,25 @@ curl https://YOUR_BACKEND_DOMAIN/api/v1/vocab/categories
 curl https://YOUR_BACKEND_DOMAIN/api/v1/grammar/topics
 ```
 
-## 3. Flutter web production build
+## 3. Render frontend deployment
+
+The Docker-based frontend service builds Flutter web inside the container and injects the backend URL at runtime.
+
+Required frontend environment variable:
+
+```text
+API_BASE_URL=https://YOUR_BACKEND_DOMAIN/api/v1
+```
+
+Optional local Docker verification:
+
+```bash
+docker compose up --build frontend backend postgres
+```
+
+## 4. Flutter web manual production build
+
+If you prefer a separate static host instead of the Render Docker frontend:
 
 Without Firebase telemetry:
 
@@ -60,7 +79,7 @@ Deploy the static output from:
 
 - [frontend/build/web](/Users/dipeshneupane/Downloads/Apps/German Learning App/frontend/build/web)
 
-## 4. Android local release build
+## 5. Android local release build
 
 ```bash
 cd frontend
@@ -76,7 +95,7 @@ flutter build appbundle --release \
   --dart-define=API_BASE_URL=https://YOUR_BACKEND_DOMAIN/api/v1
 ```
 
-## 5. Live smoke test checklist
+## 6. Live smoke test checklist
 
 After deployment, verify:
 

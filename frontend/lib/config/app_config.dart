@@ -1,5 +1,8 @@
 import 'package:flutter/foundation.dart';
 
+import 'web_runtime_config_stub.dart'
+    if (dart.library.html) 'web_runtime_config_web.dart' as web_runtime;
+
 class AppConfig {
   static const String _customApiBaseUrl = String.fromEnvironment(
     'API_BASE_URL',
@@ -15,6 +18,10 @@ class AppConfig {
   );
 
   static String get apiBaseUrl {
+    final runtimeWebApiBaseUrl = web_runtime.readConfigValue('apiBaseUrl');
+    if (runtimeWebApiBaseUrl != null && runtimeWebApiBaseUrl.isNotEmpty) {
+      return runtimeWebApiBaseUrl;
+    }
     if (_customApiBaseUrl.isNotEmpty) {
       return _customApiBaseUrl;
     }

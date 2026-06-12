@@ -139,6 +139,7 @@ The project now includes a Render Blueprint file:
 What it sets up:
 
 - one Docker-based Spring Boot web service
+- one Docker-based Flutter web frontend service
 - one Render Postgres database
 - automatic database wiring through Render's `connectionString`
 - a health check on `/api/v1/vocab/categories`
@@ -153,9 +154,14 @@ To use it on Render:
 
 1. Push this project to GitHub.
 2. In Render, create a new Blueprint instance from the repo.
-3. When prompted, set `CORS_ALLOWED_ORIGINS` to your frontend URL, such as `https://your-app.netlify.app`.
-4. Let Render provision the database and backend.
-5. After deploy, open `https://YOUR_RENDER_BACKEND/api/v1/vocab/categories` and confirm it returns data.
+3. When prompted, set:
+   - `API_BASE_URL=https://YOUR_RENDER_BACKEND/api/v1`
+   - `CORS_ALLOWED_ORIGINS=https://YOUR_RENDER_FRONTEND`
+4. Let Render provision the database, backend, and frontend.
+5. After deploy, open:
+   - `https://YOUR_RENDER_BACKEND/api/v1/vocab/categories`
+   - `https://YOUR_RENDER_FRONTEND`
+6. If Render gives your frontend a different URL after the first deploy, update `CORS_ALLOWED_ORIGINS` in the backend service and redeploy it.
 
 ### Backend API Endpoints
 
@@ -257,6 +263,31 @@ flutter build web --release \
 
 If Firebase is live in production, replace `false` and add the Firebase values shown above.
 
+### Render frontend deployment
+
+The frontend now includes:
+
+- [frontend/Dockerfile](/Users/dipeshneupane/Downloads/Apps/German Learning App/frontend/Dockerfile)
+- [frontend/Caddyfile](/Users/dipeshneupane/Downloads/Apps/German Learning App/frontend/Caddyfile)
+- [frontend/docker-entrypoint.sh](/Users/dipeshneupane/Downloads/Apps/German Learning App/frontend/docker-entrypoint.sh)
+- [frontend/web/config.js](/Users/dipeshneupane/Downloads/Apps/German Learning App/frontend/web/config.js)
+
+This is the recommended Render deployment path for the Flutter web app because the container builds Flutter and injects `API_BASE_URL` at runtime.
+
+Set this frontend environment variable on Render:
+
+- `API_BASE_URL=https://YOUR_BACKEND_DOMAIN/api/v1`
+
+The frontend reads that runtime value through:
+
+- [frontend/lib/config/app_config.dart](/Users/dipeshneupane/Downloads/Apps/German Learning App/frontend/lib/config/app_config.dart)
+
+For local Docker testing:
+
+```bash
+docker compose up --build frontend backend postgres
+```
+
 ## Local Progress Keys
 
 The app stores local progress with `shared_preferences` using these keys:
@@ -307,8 +338,8 @@ The safest rollout order is:
 
 1. Deploy PostgreSQL
 2. Deploy the Spring Boot backend and confirm `/api/v1/vocab/categories` responds
-3. Build Flutter web with the production `API_BASE_URL`
-4. Deploy the Flutter web static build
+3. Deploy the Docker-based Render frontend and set `API_BASE_URL`
+4. Confirm the backend `CORS_ALLOWED_ORIGINS` matches the frontend domain
 5. Test live vocabulary, grammar, daily challenge, and local progress storage
 6. Turn on Firebase telemetry
 7. Replace ad placeholders only after policy pages and platform approval are ready
@@ -333,9 +364,9 @@ Quick command reference:
 
 ### Web frontend
 
-1. Build Flutter web with the real backend domain.
-2. Deploy [frontend/build/web](/Users/dipeshneupane/Downloads/Apps/German Learning App/frontend/build/web) to Netlify, Vercel, Firebase Hosting, or another static host.
-3. Make sure SPA routing is enabled. For Netlify-style routing, [frontend/web/_redirects](/Users/dipeshneupane/Downloads/Apps/German Learning App/frontend/web/_redirects) is already included.
+1. Deploy the Docker-based frontend service from [render.yaml](/Users/dipeshneupane/Downloads/Apps/German Learning App/render.yaml).
+2. Set `API_BASE_URL=https://YOUR_BACKEND_DOMAIN/api/v1` on the frontend service.
+3. Make sure the backend `CORS_ALLOWED_ORIGINS` includes the deployed frontend domain.
 4. Open the deployed site and test:
    - Vocabulary categories
    - Flashcards
@@ -344,6 +375,8 @@ Quick command reference:
    - Wrong-answer review
    - Privacy Policy
    - Terms of Use
+
+If you prefer a non-Render static host, you can still build locally and deploy [frontend/build/web](/Users/dipeshneupane/Downloads/Apps/German Learning App/frontend/build/web) to Netlify, Vercel, Firebase Hosting, or another static host.
 
 ### Android
 
@@ -354,7 +387,7 @@ Quick command reference:
 ## Release Checklist
 
 - Backend deployed with PostgreSQL and correct `CORS_ALLOWED_ORIGINS`
-- Flutter web built with the real production `API_BASE_URL`
+- Frontend deployed with the correct `API_BASE_URL`
 - Android tested on a physical device
 - Web tested in Chrome
 - Privacy Policy page prepared
