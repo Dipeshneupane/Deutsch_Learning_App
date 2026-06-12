@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: german-learning-api
+    runtime: docker
+    plan: free
+    dockerContext: ./backend
+    dockerfilePath: ./backend/Dockerfile
+    healthCheckPath: /api/v1/vocab/categories
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: german-learning-db
+          property: connectionString
+      - key: CORS_ALLOWED_ORIGINS
+        sync: false
+
+databases:
+  - name: german-learning-db
+    plan: free
+    databaseName: german_learning_app

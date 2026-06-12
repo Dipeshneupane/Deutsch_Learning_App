@@ -1,0 +1,301 @@
+categoryName|level|german|english
+Family|A1|die Mutter|mother
+Family|A1|der Vater|father
+Family|A1|der Bruder|brother
+Family|A1|die Schwester|sister
+Family|A1|die Eltern|parents
+Family|A1|das Kind|child
+Family|A1|der Sohn|son
+Family|A1|die Tochter|daughter
+Family|A1|die Familie|family
+Family|A1|die Oma|grandma
+Family|A2|der Opa|grandpa
+Family|A2|der Onkel|uncle
+Family|A2|die Tante|aunt
+Family|A2|der Cousin|male cousin
+Family|A2|die Cousine|female cousin
+Family|B1|die Beziehung|relationship
+Family|B1|sich streiten|to argue
+Family|B1|sich verstehen|to get along
+Family|B1|verheiratet|married
+Family|B1|ledig|single
+Food & Drinks|A1|das Brot|bread
+Food & Drinks|A1|das Wasser|water
+Food & Drinks|A1|der Kaffee|coffee
+Food & Drinks|A1|der Tee|tea
+Food & Drinks|A1|der Apfel|apple
+Food & Drinks|A1|die Banane|banana
+Food & Drinks|A1|der Kaese|cheese
+Food & Drinks|A1|die Suppe|soup
+Food & Drinks|A1|das Fruehstueck|breakfast
+Food & Drinks|A1|das Getraenk|drink
+Food & Drinks|A2|das Mittagessen|lunch
+Food & Drinks|A2|das Abendessen|dinner
+Food & Drinks|A2|das Gemuese|vegetables
+Food & Drinks|A2|das Obst|fruit
+Food & Drinks|A2|das Rezept|recipe
+Food & Drinks|B1|probieren|to try
+Food & Drinks|B1|kochen|to cook
+Food & Drinks|B1|schmecken|to taste
+Food & Drinks|B1|die Mahlzeit|meal
+Food & Drinks|B1|nahrhaft|nutritious
+Travel|A1|der Bahnhof|train station
+Travel|A1|der Zug|train
+Travel|A1|das Ticket|ticket
+Travel|A1|der Bus|bus
+Travel|A1|das Hotel|hotel
+Travel|A1|der Koffer|suitcase
+Travel|A1|der Flughafen|airport
+Travel|A1|die Reise|trip
+Travel|A1|die Strasse|street
+Travel|A1|die Karte|map
+Travel|A2|abfahren|to depart
+Travel|A2|ankommen|to arrive
+Travel|A2|die Unterkunft|accommodation
+Travel|A2|die Reservierung|reservation
+Travel|A2|umsteigen|to change trains
+Travel|B1|die Verspaetung|delay
+Travel|B1|die Grenze|border
+Travel|B1|der Reisepass|passport
+Travel|B1|besichtigen|to visit
+Travel|B1|unterwegs|on the way
+School|A1|die Schule|school
+School|A1|der Lehrer|teacher
+School|A1|die Lehrerin|female teacher
+School|A1|das Buch|book
+School|A1|der Stift|pen
+School|A1|der Schueler|student
+School|A1|die Hausaufgabe|homework
+School|A1|die Klasse|class
+School|A1|der Tisch|desk
+School|A1|die Pause|break
+School|A2|die Pruefung|exam
+School|A2|der Stundenplan|schedule
+School|A2|die Aufgabe|task
+School|A2|erklaeren|to explain
+School|A2|lernen|to learn
+School|B1|ueben|to practise
+School|B1|bestehen|to pass
+School|B1|die Notiz|note
+School|B1|die Fremdsprache|foreign language
+School|B1|das Zeugnis|report card
+Work|A1|die Arbeit|work
+Work|A1|das Buero|office
+Work|A1|der Chef|boss
+Work|A1|die Kollegin|female colleague
+Work|A1|der Kollege|male colleague
+Work|A1|das Meeting|meeting
+Work|A1|die Aktenmappe|file folder
+Work|A1|die E-Mail|email
+Work|A1|der Laptop|laptop
+Work|A1|das Team|team
+Work|A2|der Termin|appointment
+Work|A2|das Projekt|project
+Work|A2|die Erfahrung|experience
+Work|A2|besprechen|to discuss
+Work|A2|organisieren|to organize
+Work|B1|verdienen|to earn
+Work|B1|der Beruf|profession
+Work|B1|die Bewerbung|application
+Work|B1|kuendigen|to resign
+Work|B1|erfolgreich|successful
+Shopping|A1|das Geschaeft|shop
+Shopping|A1|der Preis|price
+Shopping|A1|das Geld|money
+Shopping|A1|die Tasche|bag
+Shopping|A1|die Kasse|cash register
+Shopping|A1|billig|cheap
+Shopping|A1|teuer|expensive
+Shopping|A1|kaufen|to buy
+Shopping|A1|verkaufen|to sell
+Shopping|A1|die Groesse|size
+Shopping|A2|die Rechnung|bill
+Shopping|A2|umtauschen|to exchange
+Shopping|A2|anprobieren|to try on
+Shopping|A2|bezahlen|to pay
+Shopping|A2|der Rabatt|discount
+Shopping|B1|die Auswahl|selection
+Shopping|B1|der Kunde|customer
+Shopping|B1|die Kundin|female customer
+Shopping|B1|liefern|to deliver
+Shopping|B1|verfuegbar|available
+Health|A1|der Arzt|doctor
+Health|A1|das Krankenhaus|hospital
+Health|A1|der Kopf|head
+Health|A1|der Bauch|stomach
+Health|A1|die Hand|hand
+Health|A1|der Fuss|foot
+Health|A1|krank|sick
+Health|A1|gesund|healthy
+Health|A1|die Medizin|medicine
+Health|A1|die Praxis|medical practice
+Health|A2|der Ruecken|back
+Health|A2|die Schmerzen|pain
+Health|A2|husten|to cough
+Health|A2|sich ausruhen|to rest
+Health|A2|die Krankheit|illness
+Health|B1|fit|fit
+Health|B1|das Fieber|fever
+Health|B1|verletzen|to injure
+Health|B1|behandeln|to treat
+Health|B1|die Untersuchung|examination
+Numbers|A1|eins|one
+Numbers|A1|zwei|two
+Numbers|A1|drei|three
+Numbers|A1|vier|four
+Numbers|A1|fuenf|five
+Numbers|A1|sechs|six
+Numbers|A1|sieben|seven
+Numbers|A1|acht|eight
+Numbers|A1|neun|nine
+Numbers|A1|zehn|ten
+Numbers|A2|hundert|hundred
+Numbers|A2|tausend|thousand
+Numbers|A2|die Zahl|number
+Numbers|A2|zaehlen|to count
+Numbers|A2|die Menge|amount
+Numbers|B1|wenig|little
+Numbers|B1|genug|enough
+Numbers|B1|doppelt|double
+Numbers|B1|einzeln|individually
+Numbers|B1|insgesamt|in total
+Colors|A1|rot|red
+Colors|A1|blau|blue
+Colors|A1|gruen|green
+Colors|A1|gelb|yellow
+Colors|A1|schwarz|black
+Colors|A1|weiss|white
+Colors|A1|grau|gray
+Colors|A1|braun|brown
+Colors|A1|orange|orange
+Colors|A1|rosa|pink
+Colors|A2|dunkel|dark
+Colors|A2|hell|light
+Colors|A2|die Farbe|color
+Colors|A2|bunt|colorful
+Colors|A2|rund|round
+Colors|B1|eckig|angular
+Colors|B1|die Form|shape
+Colors|B1|violett|violet
+Colors|B1|golden|golden
+Colors|B1|silbern|silver
+Time & Date|A1|der Tag|day
+Time & Date|A1|die Woche|week
+Time & Date|A1|der Monat|month
+Time & Date|A1|das Jahr|year
+Time & Date|A1|heute|today
+Time & Date|A1|morgen|tomorrow
+Time & Date|A1|gestern|yesterday
+Time & Date|A1|die Uhr|clock
+Time & Date|A1|der Kalender|calendar
+Time & Date|A1|das Datum|date
+Time & Date|A2|der Morgen|morning
+Time & Date|A2|der Abend|evening
+Time & Date|A2|spaet|late
+Time & Date|A2|frueh|early
+Time & Date|A2|dauern|to last
+Time & Date|B1|rechtzeitig|on time
+Time & Date|B1|die Vergangenheit|past
+Time & Date|B1|die Zukunft|future
+Time & Date|B1|jaehrlich|yearly
+Time & Date|B1|taeglich|daily
+Home|A1|das Haus|house
+Home|A1|die Wohnung|apartment
+Home|A1|das Zimmer|room
+Home|A1|die Kueche|kitchen
+Home|A1|das Bad|bathroom
+Home|A1|das Schlafzimmer|bedroom
+Home|A1|das Wohnzimmer|living room
+Home|A1|die Tuer|door
+Home|A1|das Fenster|window
+Home|A1|der Schluessel|key
+Home|A2|der Balkon|balcony
+Home|A2|moebliert|furnished
+Home|A2|sauber|clean
+Home|A2|der Haushalt|household
+Home|A2|aufraeumen|to tidy up
+Home|B1|die Miete|rent
+Home|B1|umziehen|to move house
+Home|B1|reparieren|to repair
+Home|B1|bequem|comfortable
+Home|B1|der Nachbar|neighbor
+City & Places|A1|die Stadt|city
+City & Places|A1|das Dorf|village
+City & Places|A1|der Platz|square
+City & Places|A1|das Museum|museum
+City & Places|A1|die Bank|bank
+City & Places|A1|die Post|post office
+City & Places|A1|der Supermarkt|supermarket
+City & Places|A1|die Apotheke|pharmacy
+City & Places|A1|das Rathaus|town hall
+City & Places|A1|die Bibliothek|library
+City & Places|A2|die Bruecke|bridge
+City & Places|A2|die Kreuzung|intersection
+City & Places|A2|der Verkehr|traffic
+City & Places|A2|oeffentlich|public
+City & Places|A2|die Gegend|area
+City & Places|B1|entdecken|to discover
+City & Places|B1|zentral|central
+City & Places|B1|ausserhalb|outside
+City & Places|B1|die Sehenswuerdigkeit|sight
+City & Places|B1|der Einwohner|resident
+Nature & Weather|A1|die Sonne|sun
+Nature & Weather|A1|der Regen|rain
+Nature & Weather|A1|der Wind|wind
+Nature & Weather|A1|der Schnee|snow
+Nature & Weather|A1|die Wolke|cloud
+Nature & Weather|A1|der Baum|tree
+Nature & Weather|A1|die Blume|flower
+Nature & Weather|A1|der Berg|mountain
+Nature & Weather|A1|der See|lake
+Nature & Weather|A1|der Fluss|river
+Nature & Weather|A2|das Wetter|weather
+Nature & Weather|A2|warm|warm
+Nature & Weather|A2|kalt|cold
+Nature & Weather|A2|trocken|dry
+Nature & Weather|A2|nass|wet
+Nature & Weather|B1|die Umwelt|environment
+Nature & Weather|B1|der Sturm|storm
+Nature & Weather|B1|wachsen|to grow
+Nature & Weather|B1|schuetzen|to protect
+Nature & Weather|B1|die Jahreszeit|season
+Hobbies & Free Time|A1|lesen|to read
+Hobbies & Free Time|A1|schwimmen|to swim
+Hobbies & Free Time|A1|tanzen|to dance
+Hobbies & Free Time|A1|singen|to sing
+Hobbies & Free Time|A1|zeichnen|to draw
+Hobbies & Free Time|A1|fotografieren|to photograph
+Hobbies & Free Time|A1|wandern|to hike
+Hobbies & Free Time|A1|reisen|to travel
+Hobbies & Free Time|A1|Musik hoeren|listen to music
+Hobbies & Free Time|A1|joggen|to jog
+Hobbies & Free Time|A2|das Hobby|hobby
+Hobbies & Free Time|A2|die Freizeit|free time
+Hobbies & Free Time|A2|sich entspannen|to relax
+Hobbies & Free Time|A2|trainieren|to train
+Hobbies & Free Time|A2|der Verein|club
+Hobbies & Free Time|B1|sammeln|to collect
+Hobbies & Free Time|B1|kreativ|creative
+Hobbies & Free Time|B1|die Leidenschaft|passion
+Hobbies & Free Time|B1|verbringen|to spend
+Hobbies & Free Time|B1|ausprobieren|to try out
+Technology & Communication|A1|das Handy|mobile phone
+Technology & Communication|A1|der Computer|computer
+Technology & Communication|A1|das Internet|internet
+Technology & Communication|A1|die Nachricht|message
+Technology & Communication|A1|anrufen|to call
+Technology & Communication|A1|schreiben|to write
+Technology & Communication|A1|herunterladen|to download
+Technology & Communication|A1|die Datei|file
+Technology & Communication|A1|die Webseite|website
+Technology & Communication|A1|das Passwort|password
+Technology & Communication|A2|die App|app
+Technology & Communication|A2|online|online
+Technology & Communication|A2|die Verbindung|connection
+Technology & Communication|A2|speichern|to save
+Technology & Communication|A2|teilen|to share
+Technology & Communication|B1|die Tastatur|keyboard
+Technology & Communication|B1|der Bildschirm|screen
+Technology & Communication|B1|das Geraet|device
+Technology & Communication|B1|der Benutzer|user
+Technology & Communication|B1|kommunizieren|to communicate

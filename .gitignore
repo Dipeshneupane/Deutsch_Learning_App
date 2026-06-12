@@ -1,0 +1,19 @@
+.DS_Store
+
+# Flutter
+frontend/.dart_tool/
+frontend/.flutter-plugins
+frontend/.flutter-plugins-dependencies
+frontend/.packages
+frontend/build/
+
+# Android / Gradle
+frontend/android/.gradle/
+frontend/android/local.properties
+
+# Java / Spring
+backend/target/
+
+# IDE
+.idea/
+*.iml
