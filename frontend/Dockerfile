@@ -3,7 +3,9 @@ FROM debian:bookworm-slim AS build
 RUN apt-get update && apt-get install -y \
     bash \
     curl \
+    gzip \
     git \
+    tar \
     unzip \
     xz-utils \
     zip \
