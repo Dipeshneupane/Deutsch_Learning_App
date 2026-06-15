@@ -14,11 +14,13 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 ENV FLUTTER_HOME=/opt/flutter
+ENV HOME=/home/flutteruser
 ENV PATH="${FLUTTER_HOME}/bin:${FLUTTER_HOME}/bin/cache/dart-sdk/bin:${PATH}"
 
 RUN git clone https://github.com/flutter/flutter.git "${FLUTTER_HOME}" --branch stable --depth 1
 RUN useradd --create-home --shell /bin/bash flutteruser \
-    && chown -R flutteruser:flutteruser "${FLUTTER_HOME}"
+    && mkdir -p /app \
+    && chown -R flutteruser:flutteruser "${FLUTTER_HOME}" /app
 
 WORKDIR /app
 COPY --chown=flutteruser:flutteruser pubspec.yaml pubspec.lock ./
