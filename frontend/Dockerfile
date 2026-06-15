@@ -17,12 +17,15 @@ ENV FLUTTER_HOME=/opt/flutter
 ENV PATH="${FLUTTER_HOME}/bin:${FLUTTER_HOME}/bin/cache/dart-sdk/bin:${PATH}"
 
 RUN git clone https://github.com/flutter/flutter.git "${FLUTTER_HOME}" --branch stable --depth 1
+RUN useradd --create-home --shell /bin/bash flutteruser \
+    && chown -R flutteruser:flutteruser "${FLUTTER_HOME}"
 
 WORKDIR /app
-COPY pubspec.yaml pubspec.lock ./
+COPY --chown=flutteruser:flutteruser pubspec.yaml pubspec.lock ./
+USER flutteruser
 RUN flutter config --enable-web && flutter pub get
 
-COPY . .
+COPY --chown=flutteruser:flutteruser . .
 RUN flutter build web --release --dart-define=FIREBASE_ENABLED=false
 
 FROM caddy:2-alpine
