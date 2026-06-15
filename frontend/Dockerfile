@@ -30,13 +30,13 @@ RUN flutter config --enable-web && flutter pub get
 COPY --chown=flutteruser:flutteruser . .
 RUN flutter build web --release --dart-define=FIREBASE_ENABLED=false
 
-FROM caddy:2-alpine
+FROM nginx:1.27-alpine
 
-COPY Caddyfile /etc/caddy/Caddyfile
+COPY nginx.conf.template /etc/nginx/templates/default.conf.template
 COPY docker-entrypoint.sh /usr/local/bin/frontend-entrypoint.sh
 RUN chmod +x /usr/local/bin/frontend-entrypoint.sh
 
-COPY --from=build /app/build/web /srv
+COPY --from=build /app/build/web /usr/share/nginx/html
 
 ENV PORT=8080
 EXPOSE 8080

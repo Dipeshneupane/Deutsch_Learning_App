@@ -268,7 +268,7 @@ If Firebase is live in production, replace `false` and add the Firebase values s
 The frontend now includes:
 
 - [frontend/Dockerfile](/Users/dipeshneupane/Downloads/Apps/German Learning App/frontend/Dockerfile)
-- [frontend/Caddyfile](/Users/dipeshneupane/Downloads/Apps/German Learning App/frontend/Caddyfile)
+- [frontend/nginx.conf.template](/Users/dipeshneupane/Downloads/Apps/German Learning App/frontend/nginx.conf.template)
 - [frontend/docker-entrypoint.sh](/Users/dipeshneupane/Downloads/Apps/German Learning App/frontend/docker-entrypoint.sh)
 - [frontend/web/config.js](/Users/dipeshneupane/Downloads/Apps/German Learning App/frontend/web/config.js)
 
