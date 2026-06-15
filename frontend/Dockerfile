@@ -1,6 +1,7 @@
 FROM debian:bookworm-slim AS build
 
 RUN apt-get update && apt-get install -y \
+    bash \
     curl \
     git \
     unzip \
